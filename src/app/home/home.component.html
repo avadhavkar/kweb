@@ -1,0 +1,102 @@
+<!--Navbar-->
+<div class="header view">
+  <div class="hm-black-strong">
+    <div class="full-bg-img">
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary kenomy-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+          <div class="collapse navbar-collapse my-2" id="navbarSupportedContent">
+            <a class="navbar-brand kenomy mr-auto" href="/">Kenomy</a>
+            <ul class="navbar-nav float-md-right">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 justify-content-md-end">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!--/.Navbar-->
+
+      <div class="jumbotron kenomy-jumbotron flex-center my-5">
+          <div class="justify-content-center">
+        <h2 class="display-3" id="homeHeading">The place to discover <br/>the best trainings</h2>
+        <hr/>
+        <h4 class="my-4"><p style="color:white;"><b>Kenomy helps you connect to more trainers and engage with them efficiently to achieve better learning outcomes.</b></p></h4>
+
+        <h2 class="my-4"><p><b>Sign up to our early access program today!</b></p></h2>
+    </div>
+        <form class="form-inline kenomy-search justify-content-center my-5" (submit)="search(searchString)">
+          <div class="input-group input-group-lg">
+            <input class="form-control input-lg" type="text" [(ngModel)]="searchString" id="search[value]" name="search[value]" placeholder="Search trainings" />
+            <span class="input-group-btn">
+          <button class="btn btn-warning" type="button" (click)="search(searchString)"><span class="fa fa-search"></span></button>
+            </span>
+            <!-- <button class="btn btn-primary btn-xl page-scroll" type="submit">Search your trainings</button> -->
+          </div>
+        </form>
+        <div class="justify-content-center">
+            <a href="/#whykenomy" class="btn btn-danger btn-lg my-1" type="button"><i class="fa fa-arrow-down"></i> More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="marketing" id="whykenomy">
+    <div class="container" *ngIf="true">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-md-center">Why Kenomy</h2>
+                    <hr class="primary">
+                    <h1 class="text-hide">Custom heading</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-search text-success sr-icons"></i>
+                        <h3>Trainer search and discovery</h3>
+                        <p class="text-muted">Access  world class trainings from  reputed trainers and learning programs</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-bullhorn text-success sr-icons"></i>
+                        <h3>Intelligent marketing for trainers</h3>
+                        <p class="text-muted">Targeted marketing tools and customized promotions for trainers for maximum impact on the learning community</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o text-success sr-icons"></i>
+                        <h3>Higher engagement levels</h3>
+                        <p class="text-muted">Increased engagement between trainers & trainees enables  useful knowledge sharing through online tools</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-pie-chart text-success sr-icons"></i>
+                        <h3>Leverage Analytical Insights</h3>
+                        <p class="text-muted">Benefit from improved learning effectiveness  by leveraging analytical engine and big data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<div class="jumbotron">
+  <h1>kenomy</h1>
+</div>

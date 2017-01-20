@@ -1,0 +1,74 @@
+/*styles for home content only*/
+
+/**
+.full-bg-img {
+    left:0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top:0;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.view {
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+}
+
+**/
+.kenomy-nav {
+    background: transparent !important;
+}
+.flex-center {
+    color: #fff;
+}
+
+.view {
+    height: 100%;
+}
+
+.flex-center {
+  text-align: center;
+  justify-content: center;
+  /*border-bottom: .05rem solid #e5e5e5;*/
+}
+
+.full-bg-img, .view .content, .view .mask {
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.jumbotron {
+    background: transparent !important;
+    border: none;
+}
+.hm-black-strong {
+    /**padding-top: 75px;**/
+    height: 100%;
+}
+.marketing {
+    background: white !important;
+    height: 100%;
+}
+.hm-black-strong .full-bg-img, .hm-black-strong .mask {
+    background-color: rgba(0,0,0,.5);
+}
+.view {
+    background: url("/assets/img/children-593313_1280.jpg")no-repeat center center fixed;
+    /*background: url("http://htmlcoder.me/preview/the_project/v.1.3/template/images/corporate-2-slider-slide-1.jpg")no-repeat center center fixed; */
+    /*background: url("http://htmlcoder.me/preview/the_project/v.1.3/template/images/corporate-4-slider-slide-2.jpg")no-repeat center center fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
