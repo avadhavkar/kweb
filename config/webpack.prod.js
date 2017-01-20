@@ -18,8 +18,6 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-
 /**
  * Webpack Constants
  */
@@ -85,33 +83,7 @@ module.exports = function (env) {
     },
 
     module: {
-        preLoaders: [{ test: /\.ts$/, loader: 'tslint-loader', exclude: [/node_modules/] }],
-        loaders: [
-            // Support for .ts files.
-            {
-                test: /\.ts$/,
-                loader: 'ts-loader',
-                exclude: [/\.(spec|e2e)\.ts$/]
-            },
 
-            // Support for *.json files.
-            { test: /\.json$/, loader: 'json-loader' },
-
-            // Support for CSS as raw text
-            { test: /\.css$/, loader: 'raw-loader' },
-
-            // support for .html as raw text
-            { test: /\.html$/, loader: 'raw-loader', exclude: [ root('src/index.html') ] },
-
-            // if you add a loader include the resolve file extension above
-
-            { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass'] },
-
-            { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
-
-            // Bootstrap 4
-            { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' }
-        ],
       rules: [
 
         /*
@@ -141,7 +113,6 @@ module.exports = function (env) {
       ]
 
     },
-    postcss: [autoprefixer], // <--- postcss
 
     /**
      * Add additional plugins to the compiler.
@@ -152,7 +123,7 @@ module.exports = function (env) {
 
       /**
        * Plugin: ExtractTextPlugin
-       * Description: Extracts imported CSS files into external stylesheet
+       * Description: Extracts imported CSS files into external stylesheet 
        *
        * See: https://github.com/webpack/extract-text-webpack-plugin
        */
@@ -185,14 +156,7 @@ module.exports = function (env) {
           'HMR': METADATA.HMR,
         }
       }),
-      // jQuery, Tether
-      new ProvidePlugin({
-          jQuery: 'jquery',
-          $: 'jquery',
-          jquery: 'jquery',
-          "Tether": 'tether',
-          "window.Tether": "tether"
-      }),
+
       /**
        * Plugin: UglifyJsPlugin
        * Description: Minimize all JavaScript output of chunks.
